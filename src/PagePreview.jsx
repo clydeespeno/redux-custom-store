@@ -23,12 +23,15 @@ export default class PagePreview extends React.Component {
         this.props.loadPage()
 
     render = () => {
-        const store = providePageStore(this.props.schemas)
-        window.pagePreviewStore = store
-        return isEmpty(this.props.page.components) ? null :
-            <div>
-                {this.renderPageComponents(this.props.page.components, store)[0]}
-            </div>
+        if (!isEmpty(this.props.page.components)) {
+            const store = providePageStore(this.props.schemas)
+            window.pagePreviewStore = store
+            return (
+                <div>
+                    {this.renderPageComponents(this.props.page.components, store)[0]}
+                </div>)
+        }
+        return null
     }
 
     renderPageComponents = (components, store) => {
