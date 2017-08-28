@@ -1,0 +1,53 @@
+VERSION.aviarc.properties
+release.properties
+pom.xml.releaseBackup
+/target/
+/dist/
+/build/
+www/build/*
+.sonar/*
+.idea
+*.iml
+node_modules
+npm-debug.log
+test-results.xml
+bower_components
+.bash_history
+.gitconfig
+.gitk
+.ssh
+*~
+.nfs*
+*.swp
+.*.swo
+
+# ignore non-committed libraries
+lib/ant*.jar
+lib/commons-lang*.jar
+lib/commons-logging*.jar
+lib/httpclient*.jar
+lib/httpcore*.jar
+lib/json*.jar
+lib/mail*.jar
+lib/nimbus-jose*.jar
+lib/spring-tx*.jar
+
+# ignore generated build files
+/www/assets/*/build/
+/www/js/*/build/
+/www/lib/build/
+
+# sonarqube
+.scannerwork/*
+
+coverage/*
+.nyc_output/*
+
+# extra config
+config.override.properties
+
+# node
+package-lock.json
+
+# server
+src/server/config/development.js
